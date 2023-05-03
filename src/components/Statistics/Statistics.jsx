@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { Item } from './Statistics.styled';
 
 export function Statistics({ statistis, total, positivePercentage }) {
   return (
     <ul>
       {Object.keys(statistis).map(stat => (
-        <li key={stat}>
+        <Item key={stat}>
           {stat}: {statistis[stat]}
-        </li>
+        </Item>
       ))}
       <li>Total: {total}</li>
       <li>Tositive feetback: {positivePercentage}%</li>
