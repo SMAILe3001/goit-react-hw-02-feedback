@@ -40,7 +40,7 @@ export class Feedback extends Component {
             onLeaveFeedback={this.statisticsUpdate}
           />
         </Section>
-        {this.countPositiveFeedbackPercentage() ? (
+        {this.countTotalFeedback() ? (
           <Section title="Statistics">
             <Statistics
               statistis={this.state}

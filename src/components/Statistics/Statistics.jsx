@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export function Statistics({ statistis, total, positivePercentage }) {
   return (
     <ul>
@@ -6,8 +8,14 @@ export function Statistics({ statistis, total, positivePercentage }) {
           {stat}: {statistis[stat]}
         </li>
       ))}
-      <li>total: {total}</li>
-      <li>positive feetback: {positivePercentage}%</li>
+      <li>Total: {total}</li>
+      <li>Tositive feetback: {positivePercentage}%</li>
     </ul>
   );
 }
+
+Statistics.propTypes = {
+  statistis: PropTypes.object,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.number,
+};
