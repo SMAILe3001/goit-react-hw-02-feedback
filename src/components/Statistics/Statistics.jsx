@@ -10,7 +10,7 @@ export function Statistics({ statistis, total, positivePercentage }) {
         </Item>
       ))}
       <li>Total: {total}</li>
-      <li>Tositive feetback: {positivePercentage}%</li>
+      <li>Positive feedback: {positivePercentage}%</li>
     </ul>
   );
 }
