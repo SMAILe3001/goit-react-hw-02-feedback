@@ -7,6 +7,19 @@ export const Button = styled.button`
   border-radius: 10px;
   text-transform: capitalize;
   &:hover {
-    background-color: rgb(116, 116, 185);
+    background-color: ${setBhColor};
   }
 `;
+
+function setBhColor(props) {
+  switch (props.children) {
+    case 'good':
+      return 'rgb(62 133 23)';
+    case 'neutral':
+      return 'rgb(56 107 201)';
+    case 'bad':
+      return 'rgb(222 80 80)';
+    default:
+      return '#000';
+  }
+}
